@@ -9,19 +9,45 @@
         <!--End SEO/browser meta tags-->
 
         <!--Stylesheets-->
-        <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet"> <!--Font-->
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Quicksand" rel="stylesheet"> <!--Font-->
         <link rel="stylesheet" href="css/bootstrap.min.css"> <!--Bootstrap-->
         <link rel="stylesheet" href="css/font-awesome.min.css"></li> <!--Font Awesome (for the icons)-->
         <link rel="stylesheet" href="css/main.css"> <!--Our custom stylesheet-->
         <!--End Stylesheets-->
+        <!--Mapbox-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+        <!--End Mapbox-->
     </head>
     <body>
     	<!--[if lte IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div id="app" class="container" v-cloak>
-            {{ title }}
+        <div id="app" class="container-fluid" v-cloak>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1 class="text-center">
+                        Clacket GPS Mockup
+                        <br>
+                        <small>for Project 1</small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-centered">
+                    <div class="description">
+                        As a mockup for the behavior expected by the GPS feature in Clacket, this map (after the browser asks permission to use the user's location) displays the user's location, as well as 5 cinemas (in random locations within a 0.5km radius) with their descriptions/details available on click.
+                        <br>
+                        In Clacket, the locations will not be randomly generated, and the cinemas displayed will be the ones playing the movie(s) the user wants to watch.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="map"></div>
+                </div>
+            </div>
         </div>
 
         <!--Scripts-->
@@ -29,6 +55,7 @@
         <script src="js/jquery-3.2.1.min.js"></script> <!--jQuery-->
         <script src="js/moment.min.js"></script> <!--Moment.js (for time calculations)-->
         <script src="js/logic.js"></script> <!--Where the Vue app logic is-->
+        <script src="js/map.js"></script> <!--Map logic-->
         <script src="js/bootstrap.min.js"></script> <!--Bootstrap-->
         <!--End Scripts-->
     </body>
